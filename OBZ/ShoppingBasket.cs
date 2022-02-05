@@ -6,9 +6,9 @@ namespace ExceptionHandling
 {
     class ShoppingBasket
     {
-        public int Count = 0;
+        public int Count { get; set;}
         public const int BasketMaxSize = 6;
-        private readonly Dictionary<int, Product> _shoppingBasket = new Dictionary<int, Product>();
+        private Dictionary<int, Product> _shoppingBasket = new Dictionary<int, Product>();
         public void Add(Product product)
         {
             if (Count < BasketMaxSize)
